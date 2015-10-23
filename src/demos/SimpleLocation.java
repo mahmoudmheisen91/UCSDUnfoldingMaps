@@ -10,8 +10,8 @@ package demos;
  */
 public class SimpleLocation
 {
-    public double latitude;
-    public double longitude;
+	private double latitude;
+    private double longitude;
     
     public SimpleLocation()
     {
@@ -33,10 +33,25 @@ public class SimpleLocation
                        other.latitude, other.longitude);          
     }
 
-    
+    public double getLatitude() {
+		return latitude;
+	}
+
+	public void setLatitude(double latitude) {
+		this.latitude = latitude;
+	}
+
+	public double getLongitude() {
+		return longitude;
+	}
+
+	public void setLongitude(double longitude) {
+		this.longitude = longitude;
+	}
+
     private double getDist(double lat1, double lon1, double lat2, double lon2)
     {
-    	int R = 6373; // radius of the earth in kilometres
+    	int R = 6373; // radius of the earth in kilometers
     	double lat1rad = Math.toRadians(lat1);
     	double lat2rad = Math.toRadians(lat2);
     	double deltaLat = Math.toRadians(lat2-lat1);

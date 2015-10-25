@@ -25,7 +25,6 @@ public class LifeMap extends PApplet {
 	public void setup() {
 		// GUI:
 		size(800, 600, OPENGL);
-		background(200, 200, 200);
 		
 		// Map:
 		this.worldMap = new UnfoldingMap(this, 0, 0, 800, 600, new Google.GoogleMapProvider());
@@ -51,6 +50,7 @@ public class LifeMap extends PApplet {
 	
 	@Override
 	public void draw() {
+		background(200, 200, 200);
 		this.worldMap.draw();
 	}
 	
